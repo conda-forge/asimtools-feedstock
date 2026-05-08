@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: asimtools
-  version: 0.1.0
+  version: "0.3.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/asimtools-${{ version }}.tar.gz
-  sha256: 6993dc602071d22279a54789676adacbb939fa5fc5194ba2c1f3f7e9c48ebf16
+  sha256: f23360b3a79551ce8fce2bc554bae0ca793195acc9c88e2a8b1eeb1da7c81a8e
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
